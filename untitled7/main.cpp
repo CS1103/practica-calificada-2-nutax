@@ -5,8 +5,8 @@
 #include "Fight.h"
 using namespace std;
 
-SCENARIO("Se crea la arena"){
-    GIVEN("Nombre de archivo de texto"){
+SCENARIO("Arena"){
+    GIVEN("Se crea objeto arena"){
         Arena prueba("peleas.txt");
         WHEN("Se crea con un parámetro de tipo string"){
             THEN("Se carga eñ archivo de texto con 18 líneas, se leen las lineas y se almacenan en un vector"){
