@@ -10,8 +10,9 @@ SCENARIO("Se crea la arena"){
         Arena prueba("peleas.txt");
         WHEN("Se carga eñ archivo de texto"){
             THEN("Se leen las lineas, se almacenan en un vector de tipo  y se crean dos peleas"){
+                REQUIRE(prueba.Actions_Size() == 12);
                 REQUIRE(prueba.Get_npeleas() == 2);
-                CHECK(prueba.Peleas().size() == prueba.Get_npeleas());
+                CHECK(prueba.Peleas_Size() == prueba.Get_npeleas());
             }
         }
     }

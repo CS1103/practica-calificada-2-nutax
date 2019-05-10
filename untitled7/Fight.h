@@ -134,7 +134,7 @@ public:
                 actions. push_back(str);
         }
         if (actions.size()>0){
-            npeleas = (actions.size()/3);
+            npeleas = (actions.size()/6);
         }
 
     }
@@ -143,7 +143,8 @@ public:
             peleas.push_back(new Fight(actions, i));
         }
     }
-    vector<Fight*> Peleas(){ return peleas;}
+    int Actions_Size(){return actions.size();}
+    int Peleas_Size(){ return peleas.size();}
     int Get_npeleas(){return npeleas;}
 };
 
