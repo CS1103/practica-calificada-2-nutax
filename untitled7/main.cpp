@@ -8,9 +8,14 @@ using namespace std;
 SCENARIO("Se crea la arena"){
     GIVEN("Nombre de archivo de texto"){
         Arena prueba("peleas.txt");
-        WHEN("Se carga eñ archivo de texto con 18 líneas y 3 peleas"){
-            THEN("Se leen las lineas, se almacenan en un vector de tipo  y se crean dos peleas"){
+        WHEN("Se crea con un parámetro de tipo string"){
+            THEN("Se carga eñ archivo de texto con 18 líneas, se leen las lineas y se almacenan en un vector"){
                 REQUIRE(prueba.Actions_Size() == 18);
+
+            }
+        }
+        WHEN("Se ejecuta"){
+            THEN("Se crean tres peleas"){
                 REQUIRE(prueba.Get_npeleas() == 3);
                 CHECK(prueba.Peleas_Size() == prueba.Get_npeleas());
                 CHECK(prueba.Get_Winner(0) == "BL");
