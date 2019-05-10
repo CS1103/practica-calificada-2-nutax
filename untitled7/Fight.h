@@ -95,6 +95,10 @@ public:
         }
         return temp;
     }
+
+    string get_name(){
+        return name;
+    }
 };
 class Fight {
     Fighter* a;
@@ -117,6 +121,7 @@ public:
             }
         }
     }
+    string get_winner(){if (winner != nullptr) {return winner->get_name();} else{return "Empate";}}
 };
 
 class Arena{
@@ -146,6 +151,7 @@ public:
     int Actions_Size(){return actions.size();}
     int Peleas_Size(){ return peleas.size();}
     int Get_npeleas(){return npeleas;}
+    string Get_Winner(int a){return peleas[a]->get_winner();}
 };
 
 #endif //UNTITLED7_FIGHT_H
